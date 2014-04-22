@@ -1,0 +1,22 @@
+{
+    "name": "Cron",
+    "title": "Cron for Javascript",
+    "description": "",
+    "version": "1.0.1",
+    "author": {
+        "name": "Jong-Ha Ahn",
+        "email": "jongha.ahn@mrlatte.net",
+        "url": "http://www.mrlatte.net"
+    },
+    "dependencies": {
+    
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/jongha/cron-js/blob/master/LICENSE"}
+    ],
+    "keywords": ["cron", "javascript", "library"],
+    "bugs": "https://github.com/jongha/cron-js/issues",
+    "homepage": "https://github.com/jongha/cron-js",
+    "docs": "https://github.com/jongha/cron-js"
+}

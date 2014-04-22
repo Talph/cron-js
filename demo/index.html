@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cron for JavaScript</title>
+	<link href="../libs/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body { margin: 50px 0px; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Cron for JavaScript</h1>
+		<hr />
+		
+		<h2>Options</h2>
+		<dl>
+			<dt>Minute<dt><dd>0-59</dd>
+			<dt>Hour<dt><dd>0-23</dd>
+			<dt>Day of month<dt><dd>1-31</dd>
+			<dt>Month<dt><dd>1-12</dd>
+			<dt>Day of week<dt><dd>0-6 (Sunday is 0, Monday is 1)</dd>
+			<dt>Exec<dt><dd>URL or Function</dd>
+		</dl>
+		
+		<div><code>cron.add("`Minute` `Hour` `Day of month` `Month` `Day of week`", `Exec`);</code></div>
+		<div><code>cron.start();</code></div>
+		<div><code>//cron.stop();</code></div>
+		
+		<h2>For every minute</h2>
+		<div><code>cron.add("* * * * *", function() { console.log("exec"); });</code></div>
+		<div><code>cron.start();</code></div>
+		
+		<hr />
+		<h2>For every 5 minute</h2>
+		<div><code>cron.add("*/5 * * * *", function() { console.log("exec"); });</code></div>
+		<div><code>cron.start();</code></div>		
+
+		<hr />
+		<h2>For every 5 minute and Sunday</h2>
+		<div><code>cron.add("*/5 * * * 0", function() { console.log("exec"); });</code></div>
+		<div><code>cron.start();</code></div>		
+
+		<h2>For every minute and URL called</h2>
+		<div><code>cron.add("* * * * *", "http://[YOURURL]");</code></div>
+		<div><code>cron.start();</code></div>
+
+		<script type="text/javascript" src="../src/cron.js"></script>
+		<script type="text/javascript">
+			cron.add("* * * * *", function() { console.log("exec"); });
+			cron.start();
+			
+			//cron.stop();
+		</script>
+	</div>
+</body>
+

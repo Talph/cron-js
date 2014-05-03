@@ -55,7 +55,7 @@ cron.add("*/5 * * * 0", function() { console.log("exec"); });
 cron.start();
 ```
 
-## For every minute and URL called
+## For every minute URL call
 
 ```
 cron.add("* * * * *", "http://[YOURURL]");

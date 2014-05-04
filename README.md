@@ -2,7 +2,7 @@
 
 Cron is a time-based job scheduler in Linux. cron-js is daemon to execute scheduled commands using JavaScript on your webpage. The script depends on the local time of the operating system. Because it is running based on the web browser which running on client side. This script can make easier and more flexible development than server side script.
 
-# Description
+## Description
 
 ```
 cron.add([date], [exec]);
@@ -29,9 +29,9 @@ cron.start(); // start cron
 cron.stop(); // stop cron
 ```
 
-# Usage
+## Usage
 
-## For every minute
+### For every minute
 
 ```
 cron.add("* * * * *", function() { console.log("exec"); });
@@ -39,7 +39,7 @@ cron.add("* * * * *", function() { console.log("exec"); });
 cron.start();
 ```
 
-## For every 5 minute
+### For every 5 minute
 
 ```
 cron.add("*/5 * * * *", function() { console.log("exec"); });
@@ -47,7 +47,7 @@ cron.add("*/5 * * * *", function() { console.log("exec"); });
 cron.start();
 ```
 
-## For every 5 minute and Sunday
+### For every 5 minute and Sunday
 
 ```
 cron.add("*/5 * * * 0", function() { console.log("exec"); });
@@ -55,7 +55,7 @@ cron.add("*/5 * * * 0", function() { console.log("exec"); });
 cron.start();
 ```
 
-## For every minute URL call
+### For every minute URL call
 
 ```
 cron.add("* * * * *", "http://[YOURURL]");
@@ -63,7 +63,7 @@ cron.add("* * * * *", "http://[YOURURL]");
 cron.start();
 ```
 
-# License
+## License
 
 cron-js is available under the terms of the MIT License.
 
